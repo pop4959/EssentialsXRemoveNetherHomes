@@ -1,0 +1,7 @@
+name: EssentialsXRemoveNetherHomes
+version: ${project.version}
+main: org.popcraft.essentialsxremovenetherhomes.Main
+api-version: "1.16"
+depend: [Essentials]
+authors: [pop4959]
+description: Removes nether homes from userdata in EssentialsX.
