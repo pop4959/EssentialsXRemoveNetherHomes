@@ -17,6 +17,9 @@ public final class Main extends JavaPlugin {
         }
         for (OfflinePlayer player : this.getServer().getOfflinePlayers()) {
             User user = essentials.getUser(player.getUniqueId());
+            if (user == null) {
+                continue;
+            }
             Location logout = user.getLogoutLocation(), last = user.getLastLocation();
             Location spawn = this.getServer().getWorlds().get(0).getSpawnLocation();
             if (logout != null && logout.getWorld() != null && World.Environment.NETHER.equals(logout.getWorld().getEnvironment())) {
